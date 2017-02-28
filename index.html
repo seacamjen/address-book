@@ -8,39 +8,74 @@
     <title>Address Book</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Address book</h1>
+  <div class="container">
+    <h1>Address book</h1>
 
-      <div class="row">
-        <div class="col-md-6">
-          <h2>Add a contact:</h2>
-          <form id="new-contact">
-            <div class="form-group">
-              <label for="new-first-name">First name</label>
-              <input type="text" class="form-control" id="new-first-name">
+    <div class="row">
+
+      <div class="col-md-6">
+        <h2>Add a contact:</h2>
+        <form id="new-contact">
+          <div class="form-group">
+            <label for="new-first-name">First name</label>
+            <input type="text" class="form-control" id="new-first-name">
+          </div>
+          <div class="form-group">
+            <label for="new-last-name">Last name</label>
+            <input type="text" class="form-control" id="new-last-name">
+          </div>
+
+          <div id="new-addresses">
+            <div class="new-address">
+              <div class="form-group">
+                <label for="home-street">Street</label>
+                <input type="text" class="form-control home-street">
+              </div>
+              <div class="form-group">
+                <label for="home-city">City</label>
+                <input type="text" class="form-control home-city">
+              </div>
+              <div class="form-group">
+                <label for="home-state">State</label>
+                <input type="text" class="form-control home-state">
+              </div>
             </div>
-            <div class="form-group">
-              <label for="new-last-name">Last name</label>
-              <input type="text" class="form-control" id="new-last-name">
-            </div>
+          </div>
+          <div id="otherAddressInput">
 
-            <button type="submit" class="btn">Add</button>
-          </form>
+          </div>
+          <span class="btn btn-primary" id="add-address">Another address</span>
 
-          <h2>Contacts:</h2>
-          <ul id="contacts">
+          <button type="submit" class="btn">Add</button>
+        </form>
 
-          </ul>
-        </div>
-        <div class="col-md-6">
+        <h2>Contacts:</h2>
+        <ul id="contacts">
+
+        </ul>
+      </div>
+
+      <div class="col-md-6">
         <div id="show-contact">
           <h2></h2>
-
           <p>First name: <span class="first-name"></span></p>
           <p>Last name: <span class="last-name"></span></p>
+          <h3>Home Address</h3>
+          <p>Street: <span class="home-street"></span></p>
+          <p>City: <span class="home-city"></span></p>
+          <p>State: <span class="home-state"></span></p>
+
+          <!-- <p>Addresses:</p>
+          <ul id="addresses">
+
+          </ul> -->
+          <h3>Other Adresses:</h3>
+          <ul id="otherAddresses">
+          </ul>
         </div>
       </div>
-      </div>
+
     </div>
-  </body>
+  </div>
+</body>
 </html>
