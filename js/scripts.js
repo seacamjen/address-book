@@ -60,7 +60,7 @@ $(document).ready(function() {
     var inputtedCity = $("input.home-city").val();
     var inputtedState = $("input.home-state").val();
     var newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedStreet, inputtedCity, inputtedState);
-debugger;
+
     $(".other-new-address").each(function() {
       var inputtedStreet = $(this).find("input.new-street").val();
       var inputtedCity = $(this).find("input.new-city").val();
@@ -68,6 +68,9 @@ debugger;
       var newAddress = new Address(inputtedStreet, inputtedCity, inputtedState);
       console.log(newAddress)
       newContact.addresses.push(newAddress);
+
+      $(".other-new-address").each(function(){
+        $(this).remove();
     });
 
     $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
@@ -83,6 +86,9 @@ debugger;
       $("ul#otherAddresses").text("");
       newContact.addresses.forEach(function(address) {
         $("ul#otherAddresses").append("<li>" + address.fullAddress() + "</li>");
+
+      
+      });
       });
 
       resetFields();
